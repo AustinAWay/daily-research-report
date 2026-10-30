@@ -1,0 +1,46 @@
+# New episode. Copy to episodes/<id>/episode.yaml and fill in. See examples/kestin-ai-tutor/episode.yaml for a full one.
+# Rules: every claim on screen is in ACCURACY_AUDIT.md with its source; citation numbers come from citations/summary.json.
+id: my-study-slug                 # lowercase-with-dashes; also the work folder name
+title: ""                         # working title of the episode
+study:
+  doi: ""
+  title: ""
+  authors: ""                     # "Surname, Surname, ..." in paper order
+  venue: ""                       # journal / conference / "arXiv"
+  published: YYYY-MM-DD
+  preprint: false                 # true => shown as PREPRINT everywhere
+angle: ""                         # one paragraph: why this study today, what we test it against
+lead_in: 0.3                      # seconds of silence before the first line
+marks:
+  montage: {after: C02, dur: 7.0} # music-only show open after this line; the sonic logo lands at the end
+  endcard: {after: V03, dur: 4.4} # sources end card after the last line
+# bleep: {line: T02, word: "word", keep: 0.55, tone: false}  # optional hard stop mid-word (true silence when tone: false)
+music: {bpm: 112, root: 50}       # optional: progression: [[0,3,7], ...] (semitones from root), logo: [0,3,5,7]
+open:
+  title: "DAILY RESEARCH REPORT"
+  tagline: "one study · checked against the fundamentals"
+  montage: ["WORD", "WORD", "WORD", "WORD"]  # 4-6 short words flashed in the show open
+  images: []                      # names from images: shown in the montage
+images: []
+#  - {name: thing_0, url: "https://commons.wikimedia.org/wiki/Special:FilePath/<File>.jpg", source: "https://commons.wikimedia.org/wiki/File:<File>.jpg", license: CC0, author: ""}
+beats:
+# Every beat is keyed to a spoken word: (line, on). It appears when that word is spoken and holds until the next beat.
+#  - {type: headline, line: C01, on: word, text: "PLAIN *ACCENT*", model: tutor}          # *x* = accent colour
+#  - {type: paper,    line: W00, on: word, title: "", venue: "", date: "", authors: "", preprint: false, tag: ""}
+#  - {type: counter,  line: W01, on: word, to: 49, from: 0, decimals: 0, prefix: "", suffix: "", label: "", color: blue, dur: 1.2}
+#  - {type: bars,     line: W04, title: "", unit: "", bars: [{label: A, value: 1.0, on: word, color: ink}, {label: B, value: 2.0, on: word, color: blue}]}
+#  - {type: model,    line: Q01, on: word, model: clock, scale: 1.0, label: "", shatter_on: word}
+#  - {type: stamp,    line: T02, on: word, text: "HOLD ON", color: coral, size: 170}   # size in px
+#  - {type: image,    line: F01, on: word, image: thing_0}            # optional h (px), dx (px offset)
+#  - {type: citations, line: C01X, on_count: word, on_breakdown: word, data: {rows: [{on: word}, {on: word}, {on: word}]}}
+# models: tutor student student2 classroom desk laptop brain neurons clock calendar crown hourglass magnifier rabbit
+#         bar_g bar_i bar_b papers two_x qmark padlock paper.   colors: ink blue coral yellow (or any CSS colour)
+lines:
+# sections in order: cold -> story -> turn -> fundamentals -> verdict (drive the music arc)
+- {id: C01, section: cold, emotion: excited, text: ""}
+- {id: C02, section: cold, emotion: anticipation, text: ""}
+- {id: V03, section: verdict, emotion: calm, text: ""}
+# optional per line: alts: ["shorter wording"], gap_after: 0.35, max_dur: 6.0
+sources: []
+#  - {cite: "Author, A. (Year). Title. Journal Vol, pages. doi:...", kind: study|fundamentals, preprint: false}
+credits: []

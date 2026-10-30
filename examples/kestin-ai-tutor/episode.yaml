@@ -1,0 +1,157 @@
+# Example episode: one complete script + visual plan. Copy this folder to start a new episode.
+# Every claim on screen must be in ACCURACY_AUDIT.md with its source quote. Citation numbers come from
+# citations/summary.json (scripts/citations_classify.py), never typed by hand.
+id: kestin-ai-tutor
+title: "The AI tutor that 'doubled learning'"
+study:
+  doi: 10.1038/s41598-025-97652-6
+  title: "AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting"
+  authors: "Kestin, Miller, Klales, Milbourne, Ponti"
+  venue: Scientific Reports
+  published: 2025-06-03
+  preprint: false
+lead_in: 0.3
+marks:
+  montage: {after: C02, dur: 7.0}      # music-only show open; the logo lands at montage + 7.0 s
+  endcard: {after: V03, dur: 4.4}      # sources end card under the musical resolve
+bleep: {line: T02, word: bullshit, keep: 0.55, tone: false}   # hard stop on "bullsh-": true silence, no beep
+music: {bpm: 112, root: 50}
+open:
+  title: "DAILY RESEARCH REPORT"
+  tagline: "one study · checked against the fundamentals"
+  montage: ["AI TUTOR", "2× GAINS", "HARVARD", "BUT WHEN?", "ONE WEEK", "THE VERDICT"]
+  images: [classroom_0, neurons_0]
+images:   # fetched by scripts/fetch_images.py into assets/images/kestin-ai-tutor/ (never committed)
+  - {name: classroom_0, url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rows_of_Desks_in_Lecture_Theatre.jpg", source: "https://commons.wikimedia.org/wiki/File:Rows_of_Desks_in_Lecture_Theatre.jpg", license: CC0, author: "Paul The Writer"}
+  - {name: neurons_0, url: "https://commons.wikimedia.org/wiki/Special:FilePath/GFP_Neurons.png", source: "https://commons.wikimedia.org/wiki/File:GFP_Neurons.png", license: CC BY-SA 4.0, author: "ManuelSchottdorf"}
+  - {name: calendar_0, url: "https://commons.wikimedia.org/wiki/Special:FilePath/WallCalendar.jpg", source: "https://commons.wikimedia.org/wiki/File:WallCalendar.jpg", license: Public domain, author: "Claudio Elias"}
+beats:   # one visual idea per beat; each starts 0.2 s before its line and runs to the next beat
+  - {type: headline, line: C01, on: null, text: "AI TUTOR vs *ACTIVE LEARNING*", model: tutor}
+  - {type: counter, line: C01, on: twice, to: 2, decimals: 0, suffix: "×", label: "the *learning gain*", color: blue}
+  - {type: citations, line: C01X, on_count: thirty, on_breakdown: sixteen, data: {rows: [{on: nine}, {on: works}, {on: questions}]}}
+  - {type: headline, line: C02, on: huge, text: "IF IT'S REAL, *IT'S HUGE*"}
+  - {type: headline, line: I01, on: daily, text: "ONE STUDY *TODAY*"}
+  - {type: paper, line: W00, on: Kestin, title: "AI tutoring outperforms *in-class active learning*", venue: "SCIENTIFIC REPORTS", date: "JUNE 2025", authors: "Kestin et al. · Harvard"}
+  - {type: image, line: W01, on: active, image: classroom_0}
+  - {type: model, line: W02, on: hundred, model: student, label: "194 students · *both* conditions"}
+  - {type: bars, line: W04, title: "post-test score (out of 5)", bars: [{label: START, value: 2.75, on: two, color: ink}, {label: CLASS, value: 3.5, on: class, color: blue}, {label: TUTOR, value: 4.5, on: tutor, color: coral}]}
+  - {type: counter, line: W05, on: forty, to: 49, label: "minutes, *not 60*", color: blue}
+  - {type: headline, line: W06, on: buy, text: "I WAS READY *TO BUY IT*"}
+  - {type: model, line: T01, on: checked, model: magnifier, label: "checked against *the fundamentals*"}
+  - {type: stamp, line: T02, on: complete, text: "HOLD ON", color: coral}
+  - {type: model, line: Q01, on: when, model: clock, label: "*when* did they test?"}
+  - {type: model, line: Q02, on: right, model: calendar, label: "same day · *never again*", shatter_on: never}
+  - {type: image, line: F01, on: neurons, image: neurons_0}
+  - {type: model, line: F02, on: hour, model: hourglass, label: "the quick boost *fades*"}
+  - {type: headline, line: F03, on: catches, text: "SAME-DAY TEST = *QUICK BOOST + LASTING CHANGE*"}
+  - {type: bars, line: F05, title: "rereading vs self-testing (% recalled)", bars: [{label: "5 MIN · REREAD", value: 81, on: eighty, color: ink}, {label: "5 MIN · TEST", value: 75, on: seventy, color: blue}, {label: "1 WEEK · REREAD", value: 42, on: fifty, color: ink}, {label: "1 WEEK · TEST", value: 56, on: forty, color: coral}], unit: "%"}
+  - {type: model, line: F06, on: crown, model: crown, label: "the *wrong* winner"}
+  - {type: headline, line: F07, on: well, text: "WELL BUILT. *SAME-DAY SCORE.*", model: laptop}
+  - {type: paper, line: F09, on: preprint, preprint: true, title: "A week later: *a split*", venue: "PREPRINT", date: "2025", authors: "not peer-reviewed"}
+  - {type: headline, line: V01, on: actually, text: "WHAT IT *ACTUALLY* SHOWED"}
+  - {type: stamp, line: V02, on: look, text: "NEXT WEEK?", color: coral}
+  - {type: image, line: V03, on: week, image: calendar_0}
+sources:
+  - {cite: "Kestin, G., Miller, K., Klales, A., Milbourne, T., & Ponti, G. (2025). AI tutoring outperforms in-class active learning. Scientific Reports 15, 17458. doi:10.1038/s41598-025-97652-6", kind: study}
+  - {cite: "Roediger, H. L., & Karpicke, J. D. (2006). Test-enhanced learning. Psychological Science 17(3), 249-255.", kind: fundamentals}
+  - {cite: "Malenka, R. C., & Bear, M. F. (2004). LTP and LTD: an embarrassment of riches. Neuron 44, 5-21.", kind: fundamentals}
+  - {cite: "Contractor & Reyes (2026). Experimental evidence on the learning impact of generative AI. arXiv 2607.08849.", kind: study, preprint: true}
+credits: "Voice: synthetic (TTS). Music & sound: original score + CC0 samples. Photos: Wikimedia Commons (see IMAGES.md)."
+lines:
+- id: C01
+  section: cold
+  emotion: excited
+  text: Harvard pitted an AI tutor against a strong active-learning class. Its students gained more than twice as much. In less time.
+- id: C01X
+  section: cold
+  emotion: frustrated
+  text: At least thirty-six papers cited it this month. Of the sixteen I could read, nine just say it works. Only one questions the same-day test.
+- id: C02
+  section: cold
+  emotion: anticipation
+  text: If that's real, it's huge.
+  gap_after: 0.3
+- id: I01
+  section: story
+  emotion: excited
+  text: All right, {VIEWER_NAME}. This is your daily research report. Just one study today, and it's a big one.
+- id: W00
+  section: story
+  emotion: enthusiastic
+  text: You've probably seen this one. Kestin and colleagues at Harvard, Scientific Reports, June twenty twenty-five.
+- id: W01
+  section: story
+  emotion: enthusiastic
+  text: And the AI wasn't up against some dull lecture. It faced active learning, which reliably beats lectures.
+- id: W02
+  section: story
+  emotion: enthusiastic
+  text: A hundred and ninety-four students each did one lesson with the tutor at home and one in class, so every student tried both.
+- id: W04
+  section: story
+  emotion: excited
+  text: The typical student started at two point seven five. The class got them to three point five. The tutor? Four point five.
+- id: W05
+  section: story
+  emotion: excited
+  text: More than double the gain, in a median of forty-nine minutes instead of sixty.
+- id: W06
+  section: story
+  emotion: anticipation
+  text: Honestly? I was ready to buy it.
+- id: T01
+  section: turn
+  emotion: curious
+  text: Then I checked it against {NOTES_NAME} and the research you've saved on how people learn.
+- id: T02
+  section: turn
+  emotion: frustrated
+  text: And this study? It's complete bullshit.
+- id: Q01
+  section: turn
+  emotion: skeptical
+  text: Harsh, I know. But it comes down to one thing. When did they test?
+- id: Q02
+  section: turn
+  emotion: skeptical
+  text: Right after the lesson. The study never tested them again.
+- id: F01
+  section: fundamentals
+  emotion: confident
+  text: That matters, because learning is physical. When two neurons keep firing together, their connection gets stronger.
+- id: F02
+  section: fundamentals
+  emotion: confident
+  text: But that first boost fades in about an hour, unless the cell makes new proteins to lock it in.
+- id: F03
+  section: fundamentals
+  emotion: confident
+  text: So a test right after the lesson catches the quick boost and the lasting change together, and can't tell them apart.
+- id: F05
+  section: fundamentals
+  emotion: confident
+  text: In one classic experiment, five minutes after studying, rereaders beat self-testers, eighty-one percent to seventy-five. A week later it flipped. Fifty-six to forty-two, for the self-testers.
+- id: F06
+  section: fundamentals
+  emotion: determined
+  text: Test too early, and you can crown the wrong winner.
+- id: F07
+  section: fundamentals
+  emotion: confident
+  text: 'The tutor itself was well built: no full solutions, feedback on demand. But a same-day score can''t show what lasts.'
+- id: F09
+  section: fundamentals
+  emotion: confident
+  text: A newer preprint did test a week later and found a split. Students who chose ChatGPT as a tutor kept a small edge, not a sure one. Those who let it write lost theirs.
+- id: V01
+  section: verdict
+  emotion: calm
+  text: So what did Harvard actually show? A well-built AI tutor beat a strong class, on a test right after the lesson.
+- id: V02
+  section: verdict
+  emotion: determined
+  text: They called it more than twice the learning. But learning is what's left next week, and this study didn't look.
+- id: V03
+  section: verdict
+  emotion: determined
+  text: So whenever you build or buy something for learning, ask what happened a week later. This one? Great score on the day. Whether it stuck, nobody knows.

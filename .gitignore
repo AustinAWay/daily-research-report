@@ -1,0 +1,25 @@
+# secrets and local config
+.env
+.env.*
+!.env.example
+config.yaml
+# generated / downloaded (never commit media or third-party bundles)
+work/
+assets/
+vendor/
+fonts/
+img/
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+*.wav
+*.mp3
+*.ogg
+*.flac
+*.mp4
+*.mov
+*.npy
+*.zip
+episodes/*/citations/openalex.json
+episodes/*/citations/s2.json

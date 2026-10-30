@@ -1,0 +1,7 @@
+{
+  "name": "daily-research-report",
+  "private": true,
+  "description": "Renderer dependencies for the daily research report video skill",
+  "license": "MIT",
+  "dependencies": { "playwright": "^1.48.0" }
+}

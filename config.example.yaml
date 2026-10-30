@@ -1,0 +1,37 @@
+# Copy to config.yaml (git-ignored) and edit. ${VAR} values are read from the environment / .env at run time.
+viewer_name: ""             # optional: the host greets the viewer by name ("All right, {viewer_name}."). Empty = no name.
+notes_name: "your research notes"   # what the host calls the viewer's own notes / reading list
+topic: "learning science"   # default topic for picking the day's study
+work_root: "./work"         # every episode version gets its own folder: work/<episode-id>/v<N>/
+assets_root: "./assets"     # fetched sounds, fonts, vendor libs, images (git-ignored)
+
+voice:
+  provider: cartesia
+  api_key_env: CARTESIA_API_KEY        # the key is only ever read from this env var
+  voice_id: "${CARTESIA_VOICE_ID}"     # pick a voice in your Cartesia account; keep its id in .env
+  model_id: "sonic-3.6-2026-08-27"   # any current Cartesia sonic model
+  version: "2026-08-14"                # Cartesia-Version header
+  speed: 1.28                          # a brisk, energetic host pace
+  takes: 3                             # takes per line; the best fitting / clearest one is kept
+  sample_rate: 48000
+
+render:
+  chrome_path: "${CHROME_PATH}"        # optional; empty = Playwright's bundled Chromium
+  chunk_frames: 300                    # resumable chunk size (~2-6 min each on a laptop CPU)
+  fps: 30
+  lock_file: "${RENDER_LOCK}"          # optional: flock file so only one render runs at a time on shared machines
+
+audio:
+  target_lufs: -14.0
+  true_peak_max: -1.0
+  duck_db: 9.0
+  music_base_db: -3.0
+
+share:
+  crf: 23
+  maxrate: "7M"
+  bufsize: "14M"
+
+citations:
+  mailto: "${OPENALEX_MAILTO}"         # OpenAlex polite pool (optional)
+  s2_api_key_env: S2_API_KEY           # optional Semantic Scholar key

@@ -1,0 +1,5 @@
+{"n": 36, "readable": 16, "counts": {"supports": 9, "mentions": 6, "questions": 1},
+ "note": "from CITATIONS.md: 9 say it works, 3 note the timing but not as a limit, 1 questions the same-day test, 3 other (2 passing, 1 unclear); 20 of 36 had no readable context",
+ "card": {"at_least": 36, "readable": 16, "sources_line": "OpenAlex 23 · Semantic Scholar 27 · published Oct 1-30, 2026",
+  "rows": [{"n": 9, "label": "just say \"it works\"", "color": "blue"}, {"n": 3, "label": "note the timing, but not as a limit", "color": "ink"}, {"n": 1, "label": "questions the same-day test", "color": "coral"}],
+  "footer": "+3 other (2 passing, 1 unclear) · 20 of 36 not classified (no readable context)"}}

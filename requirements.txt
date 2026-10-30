@@ -1,0 +1,7 @@
+numpy>=1.24
+scipy>=1.10
+soundfile>=0.12
+pyyaml>=6.0
+requests>=2.31
+pedalboard>=0.9      # GPL-3; used as a tool only (effects), no audio content
+faster-whisper>=1.0  # QA transcripts + take scoring (downloads the small.en model on first use)
